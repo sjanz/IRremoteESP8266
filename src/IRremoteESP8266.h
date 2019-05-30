@@ -117,6 +117,9 @@
 #define DECODE_SHARP           false
 #define SEND_SHARP             false
 
+#define DECODE_SHARP_AC        false
+#define SEND_SHARP_AC          false
+
 #define DECODE_DENON           false
 #define SEND_DENON             false
 
@@ -129,6 +132,9 @@
 #define DECODE_FUJITSU_AC      false
 #define SEND_FUJITSU_AC        false
 
+#define DECODE_INAX            false
+#define SEND_INAX              false
+
 #define DECODE_DAIKIN          false
 #define SEND_DAIKIN            false
 
@@ -137,6 +143,9 @@
 
 #define DECODE_GLOBALCACHE     false  // Not written.
 #define SEND_GLOBALCACHE       false
+
+#define DECODE_GOODWEATHER     false
+#define SEND_GOODWEATHER       false
 
 #define DECODE_GREE            false
 #define SEND_GREE              false
@@ -232,7 +241,7 @@
      DECODE_WHIRLPOOL_AC || DECODE_SAMSUNG_AC || DECODE_ELECTRA_AC || \
      DECODE_PANASONIC_AC || DECODE_MWM || DECODE_DAIKIN2 || \
      DECODE_VESTEL_AC || DECODE_TCL112AC || DECODE_MITSUBISHIHEAVY || \
-     DECODE_DAIKIN216)
+     DECODE_DAIKIN216 || DECODE_SHARP_AC)
 #define DECODE_AC true  // We need some common infrastructure for decoding A/Cs.
 #else
 #define DECODE_AC false   // We don't need that infrastructure.
@@ -313,8 +322,11 @@ enum decode_type_t {
   MITSUBISHI_HEAVY_88,
   MITSUBISHI_HEAVY_152,  // 60
   DAIKIN216,
+  SHARP_AC,
+  GOODWEATHER,
+  INAX,
   // Add new entries before this one, and update it to point to the last entry.
-  kLastDecodeType = DAIKIN216,
+  kLastDecodeType = INAX,
 };
 
 // Message lengths & required repeat values
@@ -324,6 +336,7 @@ const uint16_t kSingleRepeat = 1;
 const uint16_t kAiwaRcT501Bits = 15;
 const uint16_t kAiwaRcT501MinRepeats = kSingleRepeat;
 const uint16_t kArgoStateLength = 12;
+const uint16_t kArgoBits = kArgoStateLength * 8;
 const uint16_t kArgoDefaultRepeat = kNoRepeat;
 const uint16_t kCoolixBits = 24;
 const uint16_t kCoolixDefaultRepeat = 1;
@@ -341,6 +354,7 @@ const uint16_t kDaikin216StateLength = 27;
 const uint16_t kDaikin216Bits = kDaikin216StateLength * 8;
 const uint16_t kDaikin216DefaultRepeat = kNoRepeat;
 const uint16_t kDenonBits = 15;
+const uint16_t kDenon48Bits = 48;
 const uint16_t kDenonLegacyBits = 14;
 const uint16_t kDishBits = 16;
 const uint16_t kDishMinRepeat = 3;
@@ -353,6 +367,8 @@ const uint16_t kFujitsuAcBits = kFujitsuAcStateLength * 8;
 const uint16_t kFujitsuAcMinBits = (kFujitsuAcStateLengthShort - 1) * 8;
 const uint16_t kGicableBits = 16;
 const uint16_t kGicableMinRepeat = kSingleRepeat;
+const uint16_t kGoodweatherBits = 48;
+const uint16_t kGoodweatherMinRepeat = kNoRepeat;
 const uint16_t kGreeStateLength = 8;
 const uint16_t kGreeBits = kGreeStateLength * 8;
 const uint16_t kGreeDefaultRepeat = kNoRepeat;
@@ -369,6 +385,8 @@ const uint16_t kHitachiAc1StateLength = 13;
 const uint16_t kHitachiAc1Bits = kHitachiAc1StateLength * 8;
 const uint16_t kHitachiAc2StateLength = 53;
 const uint16_t kHitachiAc2Bits = kHitachiAc2StateLength * 8;
+const uint16_t kInaxBits = 24;
+const uint16_t kInaxMinRepeat = kSingleRepeat;
 const uint16_t kJvcBits = 16;
 const uint16_t kKelvinatorStateLength = 16;
 const uint16_t kKelvinatorBits = kKelvinatorStateLength * 8;
@@ -428,6 +446,9 @@ const uint16_t kSanyoLC7461Bits = (kSanyoLC7461AddressBits +
 const uint8_t  kSharpAddressBits = 5;
 const uint8_t  kSharpCommandBits = 8;
 const uint16_t kSharpBits = kSharpAddressBits + kSharpCommandBits + 2;  // 15
+const uint16_t kSharpAcStateLength = 13;
+const uint16_t kSharpAcBits = kSharpAcStateLength * 8;  // 104
+const uint16_t kSharpAcDefaultRepeat = kNoRepeat;
 const uint8_t  kSherwoodBits = kNECBits;
 const uint16_t kSherwoodMinRepeat = kSingleRepeat;
 const uint16_t kSony12Bits = 12;
@@ -444,6 +465,7 @@ const uint16_t kToshibaACStateLength = 9;
 const uint16_t kToshibaACBits = kToshibaACStateLength * 8;
 const uint16_t kToshibaACMinRepeat = kSingleRepeat;
 const uint16_t kTrotecStateLength = 9;
+const uint16_t kTrotecBits = kTrotecStateLength * 8;
 const uint16_t kTrotecDefaultRepeat = kNoRepeat;
 const uint16_t kWhirlpoolAcStateLength = 21;
 const uint16_t kWhirlpoolAcBits = kWhirlpoolAcStateLength * 8;
@@ -459,7 +481,7 @@ const uint8_t  kVestelAcBits = 56;
 #define CARRIER_AC_BITS               kCarrierAcBits
 #define DAIKIN_COMMAND_LENGTH         kDaikinStateLength
 #define DENON_BITS                    kDenonBits
-#define DENON_48_BITS                 kPanasonicBits
+#define DENON_48_BITS                 kDenon48Bits
 #define DENON_LEGACY_BITS             kDenonLegacyBits
 #define DISH_BITS                     kDishBits
 #define FUJITSU_AC_MIN_REPEAT         kFujitsuAcMinRepeat
