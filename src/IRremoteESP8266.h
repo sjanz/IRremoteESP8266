@@ -56,183 +56,174 @@
 // Disable (set to false) all the protocols you do not need/want!
 // The Air Conditioner protocols are the most expensive memory-wise.
 //
-#define DECODE_HASH            true  // Semi-unique code for unknown messages
+#define DECODE_HASH            false  // Semi-unique code for unknown messages
 
 #define SEND_RAW               true
 
-#define DECODE_NEC             true
-#define SEND_NEC               true
+#define DECODE_NEC             false
+#define SEND_NEC               false
 
-#define DECODE_SHERWOOD        true  // Doesn't exist. Actually is DECODE_NEC
-#define SEND_SHERWOOD          true
+#define DECODE_SHERWOOD        false  // Doesn't exist. Actually is DECODE_NEC
+#define SEND_SHERWOOD          false
 
-#define DECODE_RC5             true
-#define SEND_RC5               true
+#define DECODE_RC5             false
+#define SEND_RC5               false
 
-#define DECODE_RC6             true
-#define SEND_RC6               true
+#define DECODE_RC6             false
+#define SEND_RC6               false
 
-#define DECODE_RCMM            true
-#define SEND_RCMM              true
+#define DECODE_RCMM            false
+#define SEND_RCMM              false
 
-#define DECODE_SONY            true
-#define SEND_SONY              true
+#define DECODE_SONY            false
+#define SEND_SONY              false
 
-#define DECODE_PANASONIC       true
-#define SEND_PANASONIC         true
+#define DECODE_PANASONIC       false
+#define SEND_PANASONIC         false
 
-#define DECODE_JVC             true
-#define SEND_JVC               true
+#define DECODE_JVC             false
+#define SEND_JVC               false
 
-#define DECODE_SAMSUNG         true
-#define SEND_SAMSUNG           true
+#define DECODE_SAMSUNG         false
+#define SEND_SAMSUNG           false
 
-#define DECODE_SAMSUNG36       true
-#define SEND_SAMSUNG36         true
+#define DECODE_SAMSUNG36       false
+#define SEND_SAMSUNG36         false
 
-#define DECODE_SAMSUNG_AC      true
-#define SEND_SAMSUNG_AC        true
+#define DECODE_SAMSUNG_AC      false
+#define SEND_SAMSUNG_AC        false
 
-#define DECODE_WHYNTER         true
-#define SEND_WHYNTER           true
+#define DECODE_WHYNTER         false
+#define SEND_WHYNTER           false
 
-#define DECODE_AIWA_RC_T501    true
-#define SEND_AIWA_RC_T501      true
+#define DECODE_AIWA_RC_T501    false
+#define SEND_AIWA_RC_T501      false
 
-#define DECODE_LG              true
-#define SEND_LG                true
+#define DECODE_LG              false
+#define SEND_LG                false
 
-#define DECODE_SANYO           true
-#define SEND_SANYO             true
+#define DECODE_SANYO           false
+#define SEND_SANYO             false
 
-#define DECODE_MITSUBISHI      true
-#define SEND_MITSUBISHI        true
+#define DECODE_MITSUBISHI      false
+#define SEND_MITSUBISHI        false
 
-#define DECODE_MITSUBISHI2     true
-#define SEND_MITSUBISHI2       true
+#define DECODE_MITSUBISHI2     false
+#define SEND_MITSUBISHI2       false
 
-#define DECODE_DISH            true
-#define SEND_DISH              true
+#define DECODE_DISH            false
+#define SEND_DISH              false
 
-#define DECODE_SHARP           true
-#define SEND_SHARP             true
+#define DECODE_SHARP           false
+#define SEND_SHARP             false
 
-#define DECODE_SHARP_AC        true
-#define SEND_SHARP_AC          true
+#define DECODE_DENON           false
+#define SEND_DENON             false
 
-#define DECODE_DENON           true
-#define SEND_DENON             true
+#define DECODE_KELVINATOR      false
+#define SEND_KELVINATOR        false
 
-#define DECODE_KELVINATOR      true
-#define SEND_KELVINATOR        true
+#define DECODE_MITSUBISHI_AC   false  // Beta.
+#define SEND_MITSUBISHI_AC     false
 
-#define DECODE_MITSUBISHI_AC   true  // Beta.
-#define SEND_MITSUBISHI_AC     true
+#define DECODE_FUJITSU_AC      false
+#define SEND_FUJITSU_AC        false
 
-#define DECODE_FUJITSU_AC      true
-#define SEND_FUJITSU_AC        true
+#define DECODE_DAIKIN          false
+#define SEND_DAIKIN            false
 
-#define DECODE_INAX            true
-#define SEND_INAX              true
-
-#define DECODE_DAIKIN          true
-#define SEND_DAIKIN            true
-
-#define DECODE_COOLIX          true
-#define SEND_COOLIX            true
+#define DECODE_COOLIX          false
+#define SEND_COOLIX            false
 
 #define DECODE_GLOBALCACHE     false  // Not written.
-#define SEND_GLOBALCACHE       true
+#define SEND_GLOBALCACHE       false
 
-#define DECODE_GOODWEATHER     true
-#define SEND_GOODWEATHER       true
-
-#define DECODE_GREE            true
-#define SEND_GREE              true
+#define DECODE_GREE            false
+#define SEND_GREE              false
 
 #define DECODE_PRONTO          false  // Not written.
-#define SEND_PRONTO            true
+#define SEND_PRONTO            false
 
-#define DECODE_ARGO            true  // Experimental
+#define DECODE_ARGO            false  // Not written.
 #define SEND_ARGO              true
 
-#define DECODE_TROTEC          true
-#define SEND_TROTEC            true
+#define DECODE_TROTEC          false  // Not implemented.
+#define SEND_TROTEC            false
 
-#define DECODE_NIKAI           true
-#define SEND_NIKAI             true
+#define DECODE_NIKAI           false
+#define SEND_NIKAI             false
 
-#define DECODE_TOSHIBA_AC      true
-#define SEND_TOSHIBA_AC        true
+#define DECODE_TOSHIBA_AC      false
+#define SEND_TOSHIBA_AC        false
 
-#define DECODE_MAGIQUEST       true
-#define SEND_MAGIQUEST         true
+#define DECODE_MAGIQUEST       false
+#define SEND_MAGIQUEST         false
 
-#define DECODE_MIDEA           true
-#define SEND_MIDEA             true
+#define DECODE_MIDEA           false
+#define SEND_MIDEA             false
 
-#define DECODE_LASERTAG        true
-#define SEND_LASERTAG          true
+#define DECODE_LASERTAG        false
+#define SEND_LASERTAG          false
 
-#define DECODE_CARRIER_AC      true
-#define SEND_CARRIER_AC        true
+#define DECODE_CARRIER_AC      false
+#define SEND_CARRIER_AC        false
 
-#define DECODE_HAIER_AC        true
-#define SEND_HAIER_AC          true
+#define DECODE_HAIER_AC        false
+#define SEND_HAIER_AC          false
 
-#define DECODE_HITACHI_AC      true
-#define SEND_HITACHI_AC        true
+#define DECODE_HITACHI_AC      false
+#define SEND_HITACHI_AC        false
 
-#define DECODE_HITACHI_AC1     true
-#define SEND_HITACHI_AC1       true
+#define DECODE_HITACHI_AC1     false
+#define SEND_HITACHI_AC1       false
 
-#define DECODE_HITACHI_AC2     true
-#define SEND_HITACHI_AC2       true
+#define DECODE_HITACHI_AC2     false
+#define SEND_HITACHI_AC2       false
 
-#define DECODE_GICABLE         true
-#define SEND_GICABLE           true
+#define DECODE_GICABLE         false
+#define SEND_GICABLE           false
 
-#define DECODE_HAIER_AC_YRW02  true
-#define SEND_HAIER_AC_YRW02    true
+#define DECODE_HAIER_AC_YRW02  false
+#define SEND_HAIER_AC_YRW02    false
 
-#define DECODE_WHIRLPOOL_AC    true
-#define SEND_WHIRLPOOL_AC      true
+#define DECODE_WHIRLPOOL_AC    false
+#define SEND_WHIRLPOOL_AC      false
 
-#define DECODE_LUTRON          true
-#define SEND_LUTRON            true
+#define DECODE_LUTRON          false
+#define SEND_LUTRON            false
 
-#define DECODE_ELECTRA_AC      true
-#define SEND_ELECTRA_AC        true
+#define DECODE_ELECTRA_AC      false
+#define SEND_ELECTRA_AC        false
 
-#define DECODE_PANASONIC_AC    true
-#define SEND_PANASONIC_AC      true
+#define DECODE_PANASONIC_AC    false
+#define SEND_PANASONIC_AC      false
 
-#define DECODE_MWM             true
-#define SEND_MWM               true
+#define DECODE_MWM             false
+#define SEND_MWM               false
 
-#define DECODE_PIONEER         true
-#define SEND_PIONEER           true
+#define DECODE_PIONEER         false
+#define SEND_PIONEER           false
 
-#define DECODE_DAIKIN2         true
-#define SEND_DAIKIN2           true
+#define DECODE_DAIKIN2         false
+#define SEND_DAIKIN2           false
 
-#define DECODE_VESTEL_AC       true
-#define SEND_VESTEL_AC         true
+#define DECODE_VESTEL_AC       false
+#define SEND_VESTEL_AC         false
 
-#define DECODE_TECO            true
-#define SEND_TECO              true
+#define DECODE_TECO            false
+#define SEND_TECO              false
 
-#define DECODE_TCL112AC        true
-#define SEND_TCL112AC          true
+#define DECODE_TCL112AC        false
+#define SEND_TCL112AC          false
 
-#define DECODE_LEGOPF          true
-#define SEND_LEGOPF            true
+#define DECODE_LEGOPF          false
+#define SEND_LEGOPF            false
 
-#define DECODE_MITSUBISHIHEAVY true
-#define SEND_MITSUBISHIHEAVY   true
+#define DECODE_MITSUBISHIHEAVY false
+#define SEND_MITSUBISHIHEAVY   false
 
-#define DECODE_DAIKIN216       true
-#define SEND_DAIKIN216         true
+#define DECODE_DAIKIN216       false
+#define SEND_DAIKIN216         false
 
 #if (DECODE_ARGO || DECODE_DAIKIN || DECODE_FUJITSU_AC || DECODE_GREE || \
      DECODE_KELVINATOR || DECODE_MITSUBISHI_AC || DECODE_TOSHIBA_AC || \
@@ -241,7 +232,7 @@
      DECODE_WHIRLPOOL_AC || DECODE_SAMSUNG_AC || DECODE_ELECTRA_AC || \
      DECODE_PANASONIC_AC || DECODE_MWM || DECODE_DAIKIN2 || \
      DECODE_VESTEL_AC || DECODE_TCL112AC || DECODE_MITSUBISHIHEAVY || \
-     DECODE_DAIKIN216 || DECODE_SHARP_AC)
+     DECODE_DAIKIN216)
 #define DECODE_AC true  // We need some common infrastructure for decoding A/Cs.
 #else
 #define DECODE_AC false   // We don't need that infrastructure.
@@ -322,11 +313,8 @@ enum decode_type_t {
   MITSUBISHI_HEAVY_88,
   MITSUBISHI_HEAVY_152,  // 60
   DAIKIN216,
-  SHARP_AC,
-  GOODWEATHER,
-  INAX,
   // Add new entries before this one, and update it to point to the last entry.
-  kLastDecodeType = INAX,
+  kLastDecodeType = DAIKIN216,
 };
 
 // Message lengths & required repeat values
@@ -336,7 +324,6 @@ const uint16_t kSingleRepeat = 1;
 const uint16_t kAiwaRcT501Bits = 15;
 const uint16_t kAiwaRcT501MinRepeats = kSingleRepeat;
 const uint16_t kArgoStateLength = 12;
-const uint16_t kArgoBits = kArgoStateLength * 8;
 const uint16_t kArgoDefaultRepeat = kNoRepeat;
 const uint16_t kCoolixBits = 24;
 const uint16_t kCoolixDefaultRepeat = 1;
@@ -354,7 +341,6 @@ const uint16_t kDaikin216StateLength = 27;
 const uint16_t kDaikin216Bits = kDaikin216StateLength * 8;
 const uint16_t kDaikin216DefaultRepeat = kNoRepeat;
 const uint16_t kDenonBits = 15;
-const uint16_t kDenon48Bits = 48;
 const uint16_t kDenonLegacyBits = 14;
 const uint16_t kDishBits = 16;
 const uint16_t kDishMinRepeat = 3;
@@ -367,8 +353,6 @@ const uint16_t kFujitsuAcBits = kFujitsuAcStateLength * 8;
 const uint16_t kFujitsuAcMinBits = (kFujitsuAcStateLengthShort - 1) * 8;
 const uint16_t kGicableBits = 16;
 const uint16_t kGicableMinRepeat = kSingleRepeat;
-const uint16_t kGoodweatherBits = 48;
-const uint16_t kGoodweatherMinRepeat = kNoRepeat;
 const uint16_t kGreeStateLength = 8;
 const uint16_t kGreeBits = kGreeStateLength * 8;
 const uint16_t kGreeDefaultRepeat = kNoRepeat;
@@ -385,8 +369,6 @@ const uint16_t kHitachiAc1StateLength = 13;
 const uint16_t kHitachiAc1Bits = kHitachiAc1StateLength * 8;
 const uint16_t kHitachiAc2StateLength = 53;
 const uint16_t kHitachiAc2Bits = kHitachiAc2StateLength * 8;
-const uint16_t kInaxBits = 24;
-const uint16_t kInaxMinRepeat = kSingleRepeat;
 const uint16_t kJvcBits = 16;
 const uint16_t kKelvinatorStateLength = 16;
 const uint16_t kKelvinatorBits = kKelvinatorStateLength * 8;
@@ -446,9 +428,6 @@ const uint16_t kSanyoLC7461Bits = (kSanyoLC7461AddressBits +
 const uint8_t  kSharpAddressBits = 5;
 const uint8_t  kSharpCommandBits = 8;
 const uint16_t kSharpBits = kSharpAddressBits + kSharpCommandBits + 2;  // 15
-const uint16_t kSharpAcStateLength = 13;
-const uint16_t kSharpAcBits = kSharpAcStateLength * 8;  // 104
-const uint16_t kSharpAcDefaultRepeat = kNoRepeat;
 const uint8_t  kSherwoodBits = kNECBits;
 const uint16_t kSherwoodMinRepeat = kSingleRepeat;
 const uint16_t kSony12Bits = 12;
@@ -465,7 +444,6 @@ const uint16_t kToshibaACStateLength = 9;
 const uint16_t kToshibaACBits = kToshibaACStateLength * 8;
 const uint16_t kToshibaACMinRepeat = kSingleRepeat;
 const uint16_t kTrotecStateLength = 9;
-const uint16_t kTrotecBits = kTrotecStateLength * 8;
 const uint16_t kTrotecDefaultRepeat = kNoRepeat;
 const uint16_t kWhirlpoolAcStateLength = 21;
 const uint16_t kWhirlpoolAcBits = kWhirlpoolAcStateLength * 8;
@@ -481,7 +459,7 @@ const uint8_t  kVestelAcBits = 56;
 #define CARRIER_AC_BITS               kCarrierAcBits
 #define DAIKIN_COMMAND_LENGTH         kDaikinStateLength
 #define DENON_BITS                    kDenonBits
-#define DENON_48_BITS                 kDenon48Bits
+#define DENON_48_BITS                 kPanasonicBits
 #define DENON_LEGACY_BITS             kDenonLegacyBits
 #define DISH_BITS                     kDishBits
 #define FUJITSU_AC_MIN_REPEAT         kFujitsuAcMinRepeat
